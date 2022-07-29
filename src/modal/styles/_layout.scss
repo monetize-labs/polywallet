@@ -1,0 +1,111 @@
+@keyframes authModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes authModalFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes authModalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes authModalSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+}
+
+.auth-modal {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $modal-z-index;
+}
+
+.auth-modal--visible {
+  overflow: hidden;
+  padding-right: $scrollbar-width;
+}
+
+.auth-modal__backdrop {
+  animation: authModalFadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: rgba(0, 0, 0, 0.32);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  z-index: $modal-z-index;
+
+  &[closed] {
+    animation: authModalFadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.auth-modal__dialog {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: $modal-z-index;
+}
+
+.auth-modal__content {
+  align-items: center;
+  animation: authModalSlideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: $color-white;
+  border-radius: $modal-content-border-radius;
+  box-shadow: 0 11px 15px -7px #0003, 0 24px 38px 3px #00000024,
+    0 9px 46px 8px #0000001f;
+  display: flex;
+  flex-direction: column;
+  padding: $modal-content-padding;
+  pointer-events: auto;
+  width: $modal-content-width;
+
+  &[closed] {
+    animation: authModalSlideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.auth-modal__content-title {
+  font-weight: bold;
+  font-size: $modal-content-title-font-size;
+  line-height: 32px;
+  width: 260px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
