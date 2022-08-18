@@ -2,21 +2,21 @@
 
 No wallets are built the same—**Polywallet** resolves the ambiguities faced by developers using Bitcoin SV wallets.
 
-**Polywallet** is an abstraction that enables you to keep your applications wallet agnostic and allow your customers the choice to select whichever wallet desired. Adapters for [HandCash](https://docs.handcash.io/docs), [RelayX](https://relayx.com/) and [Invisible Money Button](https://docs.moneybutton.com/docs/mb-invisible-money-button.html) are currently implemented for `EncryptablePaymailWallet`, the interface that your applications can depend on.
+**Polywallet** is an abstraction that enables you to keep your applications wallet agnostic and allow your customers to select whatever wallet they desire.
 
 ![Polywallet](https://raw.githubusercontent.com/monetize-labs/polywallet/main/images/modal.png)
 
 
-## Wallets
+## Wallet Support
 
 | Wallet       |     Status      | Interfaces Supported                             |
 | ------------ | :-------------: | ------------------------------------             |
-| HandCash     |   **TESTED**    | Wallet, Balance, Encryption, Signatures, Paymail |
-| Money Button |   **TESTED**    | Wallet, Balance, Encryption, Signatures, Paymail |
-| RelayX       |   **TESTED**    | Wallet, Balance, Encryption, Signatures, Paymail |
-| Sensilet     |   **TESTED**    | Wallet, Balance, Signatures                      |
-| Twetch       |   **TESTED**    | Wallet, Signatures, Paymail                      |
-| Volt         |   **TESTED**    | Wallet, Balance                                  |
+| HandCash     |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
+| Money Button |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
+| RelayX       |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
+| Sensilet     |   **RELEASED**  | Wallet, Balance, Signatures                      |
+| Twetch       |   **RELEASED**  | Wallet, Signatures, Paymail                      |
+| Volt         |   **RELEASED**  | Wallet, Balance                                  |
 | Dot          | **NOT PLANNED** | TBD                                              |
 | Relysia      | **NOT PLANNED** | TBD                                              |
 
