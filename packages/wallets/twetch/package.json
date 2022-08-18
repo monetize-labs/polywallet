@@ -1,0 +1,42 @@
+{
+  "name": "@polywallet/twetch-adapter",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "npx shx rm -rf lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monetize-labs/polywallet.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "bitcoin-sv",
+    "bsv",
+    "crypto",
+    "polywallet",
+    "twetch",
+    "twetch-wallet",
+    "wallet"
+  ],
+  "author": "Marty McGooser Jr. and Monetize Developers <info@monetize.li>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monetize-labs/polywallet/issues"
+  },
+  "homepage": "https://github.com/monetize-labs/polywallet#readme",
+  "dependencies": {
+    "@polywallet/core": "^0.0.1",
+    "@runonbitcoin/nimble": "^1.0.14"
+  },
+  "devDependencies": {
+    "shx": "^0.3.4",
+    "typescript": "^4.7.4"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md"
+  }
+}

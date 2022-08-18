@@ -1,0 +1,45 @@
+{
+  "name": "@polywallet/core",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "npx shx rm -rf ./lib",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monetize-labs/polywallet.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "bitcoin-sv",
+    "bsv",
+    "crypto",
+    "polywallet",
+    "wallet"
+  ],
+  "author": "Marty McGooser Jr. and Monetize Developers <info@monetize.li>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monetize-labs/polywallet/issues"
+  },
+  "homepage": "https://github.com/monetize-labs/polywallet#readme",
+  "dependencies": {
+    "@moneybutton/paymail-client": "^0.38.8",
+    "@runonbitcoin/nimble": "^1.0.14",
+    "async-wait-until": "^2.0.12"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "shx": "^0.3.4",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md"
+  }
+}

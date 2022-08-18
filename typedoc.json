@@ -1,0 +1,7 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["packages/!(bundle)", "packages/wallets/*"],
+  "entryPointStrategy": "packages",
+  "excludePrivate": true,
+  "hideGenerator": true
+}

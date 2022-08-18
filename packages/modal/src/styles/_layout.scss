@@ -1,0 +1,121 @@
+.polywallet-modal {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.polywallet-modal--dark {
+  @extend .polywallet-modal;
+
+  .polywallet-modal__content {
+    background-color: $color-dark-gray;
+    color: $color-white;
+  }
+
+  .polywallet-modal__close,
+  .polywallet-modal__content-footer {
+    color: $color-gray;
+  }
+}
+
+.polywallet-modal--light {
+  @extend .polywallet-modal;
+
+  .polywallet-modal__content {
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  .polywallet-modal__close,
+  .polywallet-modal__content-footer {
+    color: $color-light-gray;
+  }
+}
+
+.polywallet-modal--visible {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+.polywallet-modal__backdrop {
+  animation: polywalletModalFadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: rgba(0, 0, 0, 0.32);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+
+  &[closed] {
+    animation: polywalletModalFadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.polywallet-modal__dialog {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.polywallet-modal__content {
+  align-items: center;
+  animation: polywalletModalSlideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: $color-white;
+  border-radius: $polywallet-modal-content-border-radius;
+  box-sizing: content-box;
+  box-shadow: 0 11px 15px -7px #0003, 0 24px 38px 3px #00000024,
+    0 9px 46px 8px #0000001f;
+  display: flex;
+  flex-direction: column;
+  padding: $polywallet-modal-content-padding;
+  pointer-events: auto;
+  width: $polywallet-modal-content-width;
+
+  &[closed] {
+    animation: polywalletModalSlideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.polywallet-modal__content--large {
+  @extend .polywallet-modal__content;
+
+  padding: $polywallet-modal-content-large-padding;
+  width: $polywallet-modal-content-large-width;
+}
+
+.polywallet-modal__close {
+  font-family: serif;
+  font-size: $polywallet-modal-close-icon-size;
+  align-self: end;
+  line-height: $polywallet-modal-close-icon-size;
+  margin: -5px 0 -5px 0;
+  cursor: pointer;
+}
+
+.polywallet-modal__content-title {
+  font-weight: 500;
+  font-size: $polywallet-modal-content-title-font-size !important;
+  letter-spacing: -0.8px;
+  line-height: 32px;
+  margin-bottom: 19px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.polywallet-modal__content-footer {
+  font-size: $polywallet-modal-content-footer-font-size !important;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 10px;
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+.polywallet-modal__content-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.polywallet-modal__content-button {
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Standard */
+
+  border-radius: $polywallet-modal-content-button-border-radius;
+  box-shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.15);
+  box-sizing: content-box;
+  color: $color-white;
+  cursor: pointer;
+  font-size: $polywallet-modal-content-button-font-size;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin: $polywallet-modal-content-button-margin-y 0
+    $polywallet-modal-content-button-margin-y 0;
+  padding: 10px 14px;
+  text-align: center;
+  transition: 0.3s;
+  width: $polywallet-modal-content-button-width;
+
+  &:active {
+    box-shadow: 0px 0px 0px hsla(0, 0%, 0%, 0.15);
+    position: relative;
+    top: 1px;
+  }
+
+  &:before {
+    content: '';
+    color: $color-white;
+    display: inline-block;
+    height: 24px;
+    margin-right: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+  }
+
+  &:hover {
+    top: 1px;
+    box-shadow: 0px 3px 6px hsla(0, 0%, 0%, 0.15);
+  }
+}
+
+.polywallet-modal__content-button--small {
+  @extend .polywallet-modal__content-button;
+
+  margin: $polywallet-modal-content-button-large-margin-y 0
+    $polywallet-modal-content-button-large-margin-y 0;
+  width: $polywallet-modal-content-button-small-width;
+}
