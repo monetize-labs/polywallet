@@ -1,8 +1,9 @@
 ![](https://raw.githubusercontent.com/monetize-labs/polywallet/main/images/logo.png)
 
-No wallets are built the same—**Polywallet** resolves the ambiguities faced by developers using Bitcoin SV wallets.
+No wallets are built the same—**Polywallet** resolves the ambiguities you, the developer, face when building with Bitcoin SV wallets.
 
-**Polywallet** is an abstraction that enables you to keep your applications wallet agnostic and allow your customers to select whatever wallet they desire.
+**Polywallet** is an abstraction that enables you to keep your applications wallet agnostic and allow your customers to select whatever wallet they desire
+
 
 ![Polywallet](https://raw.githubusercontent.com/monetize-labs/polywallet/main/images/modal.png)
 
@@ -40,23 +41,10 @@ npm install @polywallet/volt-adapter
 ## Install (CDN)
 
 ```html
-<script src="https://unpkg.com/@polywallet/bundle></script>
+<script src="https://unpkg.com/@polywallet/bundle"></script>
 ```
 
 ## Usage
-
-### Import (npm)
-
-```ts
-import { Polywallet, WalletBuilder } from '@polywallet/core';
-import { PolywalletModal } from '@polywallet/modal';
-import { HandCashWallet } from '@polywallet/handcash-adapter';
-import { MoneyButtonWallet } from '@polywallet/money-button-adapter';
-import { RelayXWallet } from '@polywallet/relayx-adapter';
-import { SensiletWallet } from '@polywallet/sensilet-adapter';
-import { TwetchWallet } from '@polywallet/twetch-adapter';
-import { VoltWallet } from '@polywallet/volt-adapter';
-```
 
 If you are using [@polywallet/modal](./packages/modal), include its stylesheet.
 
