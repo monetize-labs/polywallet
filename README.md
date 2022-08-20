@@ -4,23 +4,20 @@ No wallets are built the same—**Polywallet** resolves the ambiguities you, the
 
 **Polywallet** is an abstraction that enables you to keep your applications wallet agnostic and allow your customers to select whatever wallet they desire
 
-
 ![Polywallet](https://raw.githubusercontent.com/monetize-labs/polywallet/main/images/modal.png)
-
 
 ## Wallet Support
 
 | Wallet       |     Status      | Interfaces Supported                             |
-| ------------ | :-------------: | ------------------------------------             |
-| HandCash     |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
-| Money Button |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
-| RelayX       |   **RELEASED**  | Wallet, Balance, Encryption, Signatures, Paymail |
-| Sensilet     |   **RELEASED**  | Wallet, Balance, Signatures                      |
-| Twetch       |   **RELEASED**  | Wallet, Signatures, Paymail                      |
-| Volt         |   **RELEASED**  | Wallet, Balance                                  |
+| ------------ | :-------------: | ------------------------------------------------ |
+| HandCash     |  **RELEASED**   | Wallet, Balance, Encryption, Signatures, Paymail |
+| Money Button |  **RELEASED**   | Wallet, Balance, Encryption, Signatures, Paymail |
+| RelayX       |  **RELEASED**   | Wallet, Balance, Encryption, Signatures, Paymail |
+| Sensilet     |  **RELEASED**   | Wallet, Balance, Signatures                      |
+| Twetch       |  **RELEASED**   | Wallet, Signatures, Paymail                      |
+| Volt         |  **RELEASED**   | Wallet, Balance                                  |
 | Dot          | **NOT PLANNED** | TBD                                              |
 | Relysia      | **NOT PLANNED** | TBD                                              |
-
 
 ## Install (npm)
 
@@ -117,16 +114,15 @@ const signableWallet = await new WalletBuilder<Polywallet.SignableWallet>()
   })
   .build();
 
-const paymailWallet =
-  await new WalletBuilder<Polywallet.PaymailWallet>()
-    .with(HandCashWallet, { appId: 'APP_ID', appSecret: 'APP_SECRET' })
-    .with(MoneyButtonWallet, { clientIdentifier: 'CLIENT_IDENTIFIER' })
-    .with(RelayXWallet, { bitcomPrefix: 'BITCOM_PREFIX' })
-    .withHandler((wallets) => {
-      console.log('Authenticate manually!');
-      wallets[0].authenticate();
-    })
-    .build();
+const paymailWallet = await new WalletBuilder<Polywallet.PaymailWallet>()
+  .with(HandCashWallet, { appId: 'APP_ID', appSecret: 'APP_SECRET' })
+  .with(MoneyButtonWallet, { clientIdentifier: 'CLIENT_IDENTIFIER' })
+  .with(RelayXWallet, { bitcomPrefix: 'BITCOM_PREFIX' })
+  .withHandler((wallets) => {
+    console.log('Authenticate manually!');
+    wallets[0].authenticate();
+  })
+  .build();
 
 const paymailWalletWithoutBalance =
   await new WalletBuilder<Polywallet.PaymailWalletWithoutBalance>()
@@ -175,6 +171,7 @@ const modal = new PolywalletModal({
 modal.open([wallet]);
 modal.close();
 ```
+
 ## Support
 
 Reach out to us at info@monetize.li to request support or other inquiries.

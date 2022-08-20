@@ -5,7 +5,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "npx tsc",
-    "clean": "npx shx rm -rf lib"
+    "clean": "rm -rf lib"
   },
   "repository": {
     "type": "git",
@@ -28,12 +28,11 @@
   },
   "homepage": "https://github.com/monetize-labs/polywallet#readme",
   "dependencies": {
-    "@polywallet/core": "^0.0.1",
+    "@polywallet/core": "^0.1.0",
     "@runonbitcoin/nimble": "^1.0.14",
     "@volt.id/sdk": "^1.6.4"
   },
   "devDependencies": {
-    "shx": "^0.3.4",
     "typescript": "^4.7.4"
   },
   "typedoc": {

@@ -13,8 +13,7 @@ export class WalletBuilder<W extends Polywallet.Wallet = Polywallet.Wallet> {
   /** Defaults to 10 minutes. */
   private timeout = 600_000;
   private wallets: W[] = [];
-  private forceShowEnabled: boolean = false;
-
+  private forceShowEnabled = false;
 
   /**
    * Creates a wallet builder with the given wallet.
@@ -66,11 +65,11 @@ export class WalletBuilder<W extends Polywallet.Wallet = Polywallet.Wallet> {
    * If enabled this will force the modal to show regardless of whether or not
    * there exists an authenticated wallet. The default behaviour is to treat this
    * as not enabled.
-   * 
-   * @param enabled The boolean that determines whether forceShow is enabled or not 
+   *
+   * @param enabled The boolean that determines whether forceShow is enabled or not
    */
   public forceShow(enabled: boolean): this {
-    this.forceShowEnabled = enabled
+    this.forceShowEnabled = enabled;
     return this;
   }
 
