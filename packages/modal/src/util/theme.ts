@@ -1,5 +1,5 @@
 import { SelectorUtility } from './selector';
-import { PolywalletModalTheme } from './types';
+import { PolywalletModalTheme } from '../types';
 
 export class ThemeUtility {
   private static readonly DARK_COLOR_SCHEME_QUERY =

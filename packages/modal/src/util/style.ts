@@ -29,4 +29,10 @@ export class StyleUtility {
     style.id = 'styles-button-' + options.label.toLowerCase();
     document.querySelector('head')!.appendChild(style);
   }
+
+  public static getScrollbarWidth(): string {
+    const { clientWidth } = document.documentElement;
+    const { innerWidth } = window;
+    return Math.abs(innerWidth - clientWidth) + 'px';
+  }
 }

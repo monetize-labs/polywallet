@@ -1,7 +1,7 @@
 import { Polywallet } from '@polywallet/core';
-import { SelectorUtility } from './selector';
-import { StyleUtility } from './style';
-import { ThemeUtility } from './theme';
+import { SelectorUtility } from './util/selector';
+import { StyleUtility } from './util/style';
+import { ThemeUtility } from './util/theme';
 import { PolywalletModalMode, PolywalletModalOptions } from './types';
 
 export class PolywalletModal implements Polywallet.AuthenticationModal {
@@ -35,6 +35,7 @@ export class PolywalletModal implements Polywallet.AuthenticationModal {
     );
 
     document.body.classList.add(SelectorUtility.CLASSES.VISIBLE);
+    document.body.style.paddingRight = StyleUtility.getScrollbarWidth();
   }
 
   private build<W extends Polywallet.Wallet>(wallets: W[]): void {
@@ -112,6 +113,8 @@ export class PolywalletModal implements Polywallet.AuthenticationModal {
 
     const container: Element | null = SelectorUtility.getContainer();
     container?.parentNode?.removeChild(container);
+
     document.body.classList.remove(SelectorUtility.CLASSES.VISIBLE);
+    document.body.style.paddingRight = '0';
   }
 }
